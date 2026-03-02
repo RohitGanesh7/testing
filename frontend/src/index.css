@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply px-6 py-3 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply bg-white rounded-lg p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow;
+  }
+
+  .alert-error {
+    @apply bg-red-100 border border-red-400 text-red-800 px-4 py-3 rounded-lg flex items-center gap-3 mb-4;
+  }
+
+  .alert-success {
+    @apply bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded-lg flex items-center gap-3 mb-4;
+  }
+
+  .alert-info {
+    @apply bg-blue-100 border border-blue-400 text-blue-800 px-4 py-3 rounded-lg flex items-center gap-3 mb-4;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  .form-label {
+    @apply block font-semibold text-gray-700 text-sm mb-2;
+  }
+
+  .form-group {
+    @apply mb-4 flex flex-col gap-2;
+  }
+
+  .product-card {
+    @apply bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-all hover:-translate-y-1 flex flex-col;
+  }
+
+  .product-image {
+    @apply w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-5xl;
+  }
+
+  .product-body {
+    @apply p-6 flex flex-col flex-1;
+  }
+
+  .product-name {
+    @apply text-xl font-bold mb-2;
+  }
+
+  .product-category {
+    @apply text-xs uppercase tracking-widest text-blue-500 font-bold mb-4;
+  }
+
+  .product-description {
+    @apply text-sm text-gray-600 mb-4 flex-1;
+  }
+
+  .product-meta {
+    @apply flex justify-between items-center mb-4;
+  }
+
+  .product-price {
+    @apply text-2xl font-bold text-blue-500;
+  }
+
+  .product-stock {
+    @apply text-sm text-gray-600;
+  }
+
+  .product-stock.low {
+    @apply text-orange-500 font-semibold;
+  }
+
+  .product-stock.out {
+    @apply text-red-500 font-semibold;
+  }
+}
+
+.spinner {
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
